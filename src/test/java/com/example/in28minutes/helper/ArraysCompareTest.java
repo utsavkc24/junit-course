@@ -1,6 +1,7 @@
 package com.example.in28minutes.helper;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Arrays;
 
@@ -16,5 +17,11 @@ public class ArraysCompareTest {
         Arrays.sort(number);
 
         assertArrayEquals(expected, number);
+    }
+
+    @Test
+    public void testArraySort_NullArray() {
+        int[] number = null;
+        assertThrows(NullPointerException.class, () -> Arrays.sort(number));
     }
 }
