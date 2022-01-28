@@ -1,21 +1,24 @@
 package com.example.in28minutes.helper;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /*
- * Console Output
- * Before running all test
- * Test 1 is running...
- * Test 2 is running...
- * 
- */
+  * Console Output
+  * Test 1 is running...
+  * After running each test
+  * Test 2 is running...
+  * After running each test
+  * 
+  * 
+  */
 public class QuickBeforeAfterTest {
 
-    @BeforeAll
-    public static void beforeEach() {
-        System.out.println("Before running all test");
+    @AfterEach
+    public void afterach() {
+        System.out.println("After running each test");
     }
 
     @Test
